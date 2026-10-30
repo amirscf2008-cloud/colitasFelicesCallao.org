@@ -1,0 +1,138 @@
+/* ==========================================================
+   PÁGINA INDEX      Lo usan: index.html
+   Contiene, en este orden: portada, video e íconos, carrusel de historias, ayuda/adopción.
+   ========================================================== */
+
+/* ----- Portada ----- */
+/* Inicio: el fondo cambia entre 3 fotos cada 15 segundos */
+.portada-inicio {
+    animation: cambiarFondo 15s infinite;
+}
+
+@keyframes cambiarFondo {
+    0%, 30% {
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("../imagenes/gato1.png");
+    }
+    33%, 63% {
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("../imagenes/perro2.png");
+    }
+    66%, 97% {
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("../imagenes/perro1.png");
+    }
+}
+
+/* ----- Una mascota es parte de tu familia (video e íconos) ----- */
+.video {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    border: 6px solid var(--blanco);
+    background: var(--negro);
+    object-fit: cover;
+}
+
+.destacado-naranja {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--naranja-oscuro);
+    margin: 15px 0;
+}
+
+.iconos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icono {
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.icono img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin: 0 auto 6px;
+}
+
+/* ----- Historias felices (carrusel) ----- */
+/* Carrusel: una fila de tarjetas que se desliza hacia los lados */
+.carrusel {
+    position: relative;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* scrollbar-width oculta la barra de desplazamiento */
+.pista {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 5px;
+    scrollbar-width: none;
+}
+
+.tarjeta {
+    min-width: 240px;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid var(--celeste);
+}
+
+.tarjeta h3 {
+    margin-top: 8px;
+    font-size: 22px;
+    color: var(--naranja-oscuro);
+}
+
+.flecha {
+    position: absolute;
+    top: 40%;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: var(--naranja);
+    color: var(--blanco);
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.flecha:hover {
+    background: var(--negro);
+}
+
+.flecha-izq {
+    left: -14px;
+}
+
+.flecha-der {
+    right: -14px;
+}
+
+/* ----- Ayúdalos a encontrar un hogar (foto y logo) ----- */
+.foto {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 6px solid var(--blanco);
+}
+
+.logo-grande {
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+}

@@ -1,0 +1,37 @@
+/* ==========================================================
+   PÁGINA REGISTRO      Lo usan: registro.html
+   Contiene, en este orden: portada, género y términos y condiciones.
+   ========================================================== */
+
+/* ----- Portada ----- */
+.portada-registro {
+    background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("../imagenes/banner_registro.jpg");
+}
+
+/* ----- Género y términos ----- */
+/* Género (Registro) */
+.opciones label {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Caja de términos con barra de desplazamiento */
+.terminos {
+    height: 180px;
+    overflow-y: scroll;
+    background: var(--gris-claro);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.terminos h3 {
+    color: var(--naranja-oscuro);
+    text-align: center;
+}
+
+.terminos li {
+    list-style: disc;
+    margin: 0 0 6px 18px;
+}

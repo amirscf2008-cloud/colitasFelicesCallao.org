@@ -1,0 +1,9 @@
+/* ==========================================================
+   PÁGINA INICIOSESION      Lo usan: iniciosesion.html
+   Contiene, en este orden: solo la portada (el formulario está en formularios.css).
+   ========================================================== */
+
+/* ----- Portada ----- */
+.portada-sesion {
+    background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("../imagenes/dominio.jpg");
+}

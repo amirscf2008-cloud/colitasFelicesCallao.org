@@ -1,0 +1,107 @@
+/* ==========================================================
+   FORMULARIOS      Lo usan: iniciosesion.html, registro.html y contactanos.html
+   Contiene, en este orden: tarjeta del formulario, etiquetas y campos, contraseña con ojo, casilla de aceptar.
+   ========================================================== */
+
+/* ----- Tarjeta del formulario ----- */
+.formulario {
+    max-width: 460px;
+    margin: 0 auto;
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 20px;
+    border-top: 8px solid var(--naranja);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.formulario h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.foto-usuario {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px;
+    background: var(--celeste);
+}
+
+/* ----- Etiquetas y campos de texto ----- */
+.formulario label {
+    display: block;
+    font-weight: 800;
+    color: var(--gris);
+    margin: 14px 0 5px;
+}
+
+.formulario input[type=text], .formulario input[type=email], .formulario input[type=password], .formulario input[type=number], .formulario textarea {
+    width: 100%;
+    padding: 11px;
+    border: 2px solid var(--gris-borde);
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.formulario input:focus, .formulario textarea:focus {
+    outline: none;
+    border-color: var(--naranja);
+}
+
+.formulario textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.formulario .boton {
+    width: 100%;
+    margin: 20px 0 0;
+}
+
+.formulario a {
+    color: var(--naranja-oscuro);
+    font-weight: 800;
+}
+
+.enlace {
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* ----- Contraseña y casilla de aceptar ----- */
+/* Campo de contraseña con el botón del ojo al lado */
+.campo-clave {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.campo-clave button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.campo-clave img {
+    width: 26px;
+}
+
+/* Casilla de aceptar términos */
+.acepto {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.acepto label {
+    margin: 0;
+}

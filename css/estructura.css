@@ -1,0 +1,346 @@
+/* ==========================================================
+   ESTRUCTURA      Lo usan: TODAS las páginas
+   Contiene, en este orden: reinicio, menú, portada, secciones, botones, filas, equipo y perfiles, pie y redes.
+   Los colores no se escriben aquí: se toman de base.css con var(--nombre).
+   ========================================================== */
+
+/* ----- Reinicio ----- */
+/* Quita los espacios que el navegador pone por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Nunito", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Baloo 2", "Trebuchet MS", sans-serif;
+    line-height: 1.15;
+}
+
+/* Las imágenes nunca se salen de su caja: se achican si no caben */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ----- Menú ----- */
+.cabecera {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6%;
+    background: rgba(30, 35, 40, 0.6);
+}
+
+/* JS la activa al bajar la página */
+.menu-oscuro {
+    background: rgba(30, 35, 40, 0.9);
+}
+
+.logo {
+    width: 10%;
+}
+
+.enlaces ul {
+    display: flex;
+    gap: 10px;
+}
+
+.enlaces a {
+    color: var(--blanco);
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.enlaces a:hover, .enlaces a.activo {
+    background: var(--naranja);
+}
+
+/* ----- Menú desplegable (Colitas Felices) ----- */
+.enlaces li {
+    position: relative;
+}
+
+/* triangulito al lado del texto */
+.flecha-sub {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 270px;
+    padding: 14px 12px;
+    background: var(--desplegable);
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    z-index: 30;
+}
+
+.submenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* se abre al pasar el mouse, al usar el teclado (Tab) o al tocar en tablet */
+.tiene-submenu:hover > .submenu,
+.tiene-submenu:focus-within > .submenu,
+.tiene-submenu.abierto-sub > .submenu {
+    display: block;
+}
+
+.enlaces .submenu a {
+    display: block;
+    padding: 12px 14px;
+    font-size: 18px;
+    border-radius: 14px;
+    white-space: nowrap;
+}
+
+.enlaces .submenu a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.enlaces .submenu a.activo {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* El botón ☰ se esconde en computadora; solo se ve en celular (ver adaptable.css) */
+.boton-menu {
+    display: none;
+    font-size: 28px;
+    color: var(--blanco);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ----- Portada ----- */
+.portada {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 6% 40px;
+    background-color: var(--negro);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portada h1 {
+    font-size: 90px;
+    color: var(--blanco);
+    text-shadow: 3px 3px 0 var(--naranja), 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.portada p {
+    font-size: 24px;
+    color: var(--celeste);
+    font-weight: 700;
+    margin-top: 10px;
+    max-width: 700px;
+}
+
+.portada-mediana {
+    min-height: 75vh;
+}
+
+.portada-mediana h1 {
+    font-size: 60px;
+}
+
+.portada-chica {
+    min-height: 280px;
+    padding-top: 110px;
+}
+
+.portada-chica h1 {
+    font-size: 54px;
+}
+
+/* ----- Secciones ----- */
+.seccion {
+    padding: 70px 6%;
+}
+
+.seccion h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 20px;
+    color: var(--naranja-oscuro);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.texto-centro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.centro {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ----- Botones ----- */
+.boton {
+    display: inline-block;
+    background: var(--naranja);
+    color: var(--blanco);
+    font-family: "Baloo 2", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 30px;
+    margin: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: var(--negro);
+}
+
+.boton-celeste {
+    background: var(--celeste-oscuro);
+}
+
+/* ----- Fila: dos cosas una al lado de la otra (foto + texto) ----- */
+.fila {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+/* cada hijo ocupa la misma mitad */
+.fila > * {
+    flex: 1;
+}
+
+/* ----- Equipo y perfiles (fotos redondas) ----- */
+.equipo {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 35px;
+}
+
+.perfil {
+    text-align: center;
+}
+
+.perfil img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--naranja);
+    margin: 0 auto 12px;
+    background: var(--blanco);
+}
+
+.perfil h3 {
+    font-size: 26px;
+}
+
+.perfil p {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* ----- Pie de página y redes ----- */
+.pie {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 18px 6%;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.pie strong {
+    color: var(--celeste);
+}
+
+.redes-pie {
+    display: flex;
+    gap: 12px;
+}
+
+.redes-pie a, .redes-lateral a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blanco);
+    border-radius: 50%;
+}
+
+.redes-pie a:hover, .redes-lateral a:hover {
+    background: var(--naranja);
+}
+
+.redes-pie img, .redes-lateral img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Barra de redes fija a la derecha (solo en Inicio) */
+.redes-lateral {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -90px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 10px;
+    background: var(--negro);
+    border-radius: 16px 0 0 16px;
+    box-shadow: -3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+

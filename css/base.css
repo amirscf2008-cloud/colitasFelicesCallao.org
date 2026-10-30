@@ -1,0 +1,46 @@
+/* ==========================================================
+   BASE: los colores de la página      Lo usan: TODAS las páginas
+   ==========================================================
+
+   ¿Qué hay aquí?
+   Una lista de colores. Cada color tiene un nombre que empieza con --
+
+   ¿Cómo uso un color en otro archivo?
+   Escribiendo su nombre dentro de var():     color: var(--naranja);
+
+   ¿Cómo cambio un color en TODA la página?
+   Cambia su código aquí abajo (por ejemplo #F28C28) y se actualiza en todos los archivos.
+*/
+
+/* ----- Lista de colores ----- */
+:root {
+    --naranja: #F28C28;          /* botones, bordes y detalles */
+    --naranja-oscuro: #C96A0E;   /* subtítulos y títulos pequeños */
+    --celeste: #BFE6F7;          /* fondos de sección */
+    --celeste-oscuro: #5DB7E0;   /* botón secundario */
+    --negro: #1E2328;            /* texto, pie de página y botón al pasar el mouse */
+    --gris: #5A6570;             /* textos secundarios */
+    --gris-claro: #EEF1F3;       /* fondos suaves */
+    --gris-borde: #CFD6DB;       /* borde de los campos del formulario */
+    --blanco: #FFFFFF;           /* tarjetas, formularios y letras sobre fondo oscuro */
+    --desplegable: #00BDF2;      /* fondo del menú desplegable (Colitas Felices) */
+}
+
+/* ----- Color del texto y del fondo de la página ----- */
+body {
+    color: var(--negro);
+    background: var(--blanco);
+}
+
+/* ----- Fondos de color para las secciones (se usan como class en el HTML) ----- */
+.fondo-celeste {
+    background: var(--celeste);
+}
+
+.fondo-blanco {
+    background: var(--blanco);
+}
+
+.fondo-gris {
+    background: var(--gris-claro);
+}

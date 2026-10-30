@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Colitas Felices Callao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/estructura.css" rel="stylesheet">
+    <link href="css/formularios.css" rel="stylesheet">
+    <link href="css/registro.css" rel="stylesheet">
+    <link href="css/adaptable.css" rel="stylesheet">
+</head>
+<body>
+<div class="cabecera">
+    <div id="menu"></div>
+    <div class="portada portada-chica portada-registro">
+        <h1>Registro</h1>
+        <p>Únete a la familia de Colitas Felices Callao</p>
+    </div>
+</div>
+
+<section class="seccion fondo-celeste">
+    <form class="formulario" action="iniciosesion.html" onsubmit="return validarClaves()">
+        <img src="imagenes/usuario.png" class="foto-usuario" alt="Foto de perfil">
+        <h2>Datos de la cuenta</h2>
+        <p class="centrado">Completa la información para crear tu cuenta.</p>
+
+        <label for="nombre">Usuario</label>
+        <input type="text" id="nombre" name="nombre" required autofocus>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required>
+
+        <label for="clave">Contraseña</label>
+        <div class="campo-clave">
+            <input type="password" id="clave" name="clave" pattern="[A-Za-z]{4}[0-9]{2}" placeholder="4 letras y 2 números" required>
+            <button type="button" onclick="verClave('clave','iconoClave')"><img src="imagenes/ojo-cerrado.png" id="iconoClave" alt="Ver contraseña"></button>
+        </div>
+
+        <label for="confirmarclave">Confirmar contraseña</label>
+        <div class="campo-clave">
+            <input type="password" id="confirmarclave" name="confirmarclave" pattern="[A-Za-z]{4}[0-9]{2}" required>
+            <button type="button" onclick="verClave('confirmarclave','iconoConfirmar')"><img src="imagenes/ojo-cerrado.png" id="iconoConfirmar" alt="Ver contraseña"></button>
+        </div>
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="18" max="80" required>
+
+        <label>Género</label>
+        <div class="opciones">
+            <input type="radio" name="genero" id="hombre" value="hombre" required><label for="hombre">Hombre</label>
+            <input type="radio" name="genero" id="mujer" value="mujer"><label for="mujer">Mujer</label>
+        </div>
+
+        <div class="terminos">
+            <h3>Términos y condiciones</h3>
+            <ul>
+                <li>Debes proporcionar información verdadera y actualizada al registrarte.</li>
+                <li>Eres responsable de mantener segura tu cuenta y contraseña.</li>
+                <li>La cuenta es personal y no debe ser utilizada por otras personas.</li>
+                <li>Las historias y fotos que compartas deben respetar a las mascotas y a otras personas.</li>
+                <li>Tus datos se usarán solo para gestionar tu cuenta y las campañas de adopción y ayuda.</li>
+                <li>Te comprometes a promover el cuidado responsable y el no al abandono.</li>
+                <li>Podemos actualizar estos términos cuando sea necesario.</li>
+            </ul>
+        </div>
+        <div class="acepto">
+            <input type="checkbox" id="acepto" name="aceptar" required>
+            <label for="acepto">Acepto las condiciones de uso</label>
+        </div>
+
+        <button type="submit" class="boton">Crear cuenta</button>
+        <p class="enlace">¿Ya tienes una cuenta? <a href="iniciosesion.html">Inicia sesión</a></p>
+    </form>
+</section>
+
+<div class="pie" id="pie">
+    <p><strong>Una mascota no es solo compañía, es parte de la familia.</strong>
+    Cuidemos, valoremos y protejamos a quienes siempre están a nuestro lado. 🐾❤️</p>
+</div>
+<script src="js/menu.js"></script>
+</body>
+</html>
